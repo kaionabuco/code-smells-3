@@ -13,15 +13,13 @@ public class Facade {
         sistema.zerarSistema();
     }
 
-    //CREATE
-    public String criarEmpregado(String nome, String endereco, String tipo, String salario) throws Exception { // Nao comissionado
-        return Sistema.Empregados.AddEmpregado(nome, endereco, tipo, salario);
+    public String criarEmpregado(EmpregadoDetails empregadoDetails) throws Exception { // Nao comissionado
+        return Sistema.Empregados.AddEmpregado(empregadoDetails.nome(), empregadoDetails.endereco(), empregadoDetails.tipo(), empregadoDetails.salario());
     }
-    public String criarEmpregado(String nome, String endereco, String tipo, String salario, String comissao) throws Exception { //Comissionados
-        return Sistema.Empregados.AddEmpregado(nome, endereco, tipo, salario, comissao);
+    public String criarEmpregado(EmpregadoComissionadoDetails empregadoComissionadoDetails) throws Exception { //Comissionados
+        return Sistema.Empregados.AddEmpregado(empregadoComissionadoDetails.nome(), empregadoComissionadoDetails.endereco(), empregadoComissionadoDetails.tipo(), empregadoComissionadoDetails.salario(), empregadoComissionadoDetails.comissao());
     }
 
-    //READ
     public String getAtributoEmpregado(String emp, String atributo) throws Exception {
          return Sistema.Empregados.GetAtributoEmpregado(emp, atributo);
     }
@@ -42,7 +40,6 @@ public class Facade {
         return GetHorasExtrasTrabalhadas(emp,dataInicial,dataFinal);
     }
 
-    //UPDATE
     public void lancaCartao(String emp, String data, String horas) throws Exception {
         LancaCartao(emp,data,horas);
     }
@@ -79,7 +76,6 @@ public class Facade {
     }
 
 
-    //DELETE
     public void removerEmpregado(String emp) throws Exception {
         Sistema.Empregados.removerEmpregado(emp);
     }

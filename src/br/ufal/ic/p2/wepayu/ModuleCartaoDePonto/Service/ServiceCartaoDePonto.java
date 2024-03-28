@@ -18,7 +18,7 @@ public class ServiceCartaoDePonto {
 
     public static void LancaCartao(String id, String data, String horasString) throws Exception {
         validaCartaoLancamento(id,data, horasString);
-        // Substitui vírgulas por pontos na string de horas
+
         horasString = horasString.replace(',', '.');
 
 

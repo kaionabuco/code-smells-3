@@ -86,5 +86,3 @@ public class Empregado {
     public void SetTipo(String atributo) {this.tipo =atributo;}
 
 }
-
-//SubClasses

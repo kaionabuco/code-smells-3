@@ -62,17 +62,12 @@ public class FolhaService {
             String id = entry.getKey();
             Vendas venda = entry.getValue();
 
-            //caso o empregado seja apenas assalariado.
             if (listaEmpregados.get(id).getTipo().equalsIgnoreCase("assalariado")){
                 salarioDoEmpregadoString = listaEmpregados.get(id).getSalario();
                 salarioDoEmpregadoString.replace(",",".");
                 salarioDoEmpregado = Double.parseDouble(salarioDoEmpregadoString);
                 valorTotal += salarioDoEmpregado;
             }
-            //caso o empregado seja comissionado, sao pagos
-            //if(){
-            //}
-
         }
         return valorTotal;
     }

@@ -20,7 +20,7 @@ public class SindicatoValidations {
     public static void getTaxaValidations(String id, String DataInicial, String DataFinal) throws Exception {
         validaEmpregado(id);
         validaIsSindicalizado(id);
-        //validacoes de data
+
         validaDataInicialouFinal(DataInicial, "Data inicial");
         validaDataInicialouFinal(DataFinal, "Data final");
         isIntervaloValido(DataInicial,DataFinal);

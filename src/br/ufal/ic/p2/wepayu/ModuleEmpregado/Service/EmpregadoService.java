@@ -15,8 +15,7 @@ import static br.ufal.ic.p2.wepayu.ModuleVendas.Service.VendasService.criaCartao
 public class EmpregadoService {
 
     public String GerarId(){
-        String id = UUID.randomUUID().toString();
-        return id;
+        return UUID.randomUUID().toString();
     }
     public static boolean isNumeric(String str) {
         try {

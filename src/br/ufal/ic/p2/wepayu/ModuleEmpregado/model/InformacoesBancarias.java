@@ -6,7 +6,6 @@ public class InformacoesBancarias {
     private String agencia;
     private String contaCorrente;
 
-    // Construtor
     public InformacoesBancarias(String valor, String banco, String agencia, String contaCorrente) {
         this.valor = valor;
         this.banco = banco;
@@ -14,7 +13,6 @@ public class InformacoesBancarias {
         this.contaCorrente = contaCorrente;
     }
 
-    // Métodos de acesso
     public String getValor() {
         return valor;
     }
